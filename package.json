@@ -4,7 +4,6 @@
   "description": "Your Project Description",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
   },
   "dependencies": {
     "ejs": "^3.1.9",
