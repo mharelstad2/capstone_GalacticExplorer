@@ -1,15 +1,22 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 5163;
+const port = 5163;
 
-// Serve static files from the 'public' directory
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-// Serve the index.ejs file
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+  res.render('index');
+});
+
+app.get('/stars', (req, res) => {
+  res.render('stars');
+});
+
+app.get('/planets', (req, res) => {
+  res.render('planets');
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+  console.log(`Server listening at http://localhost:${port}`);
 });
