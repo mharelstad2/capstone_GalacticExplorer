@@ -17,6 +17,10 @@ app.get('/planets', (req, res) => {
   res.render('planets');
 });
 
+app.get('/about', (req, res) => {
+    res.render('about');
+  });
+
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
