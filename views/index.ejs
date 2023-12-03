@@ -4,31 +4,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+      margin-left: auto;
+    }
+  </style>
   <title>Galactic Explorer - Home</title>
 </head>
 
-<body style="font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f0f0f0;">
-
-  <header style="background-color: #333; color: white; text-align: center; padding: 1em 0;">
+<body>
+  <header>
     <h1>Galactic Explorer</h1>
-    <nav style="background-color: #4CAF50; color: white; padding: 1em; text-align: center;">
-      <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="display: inline; margin-right: 20px;"><a href="/stars" style="text-decoration: none; color: white; font-weight: bold; font-size: 18px;">Stars</a></li>
-        <li style="display: inline; margin-right: 20px;"><a href="/planets" style="text-decoration: none; color: white; font-weight: bold; font-size: 18px;">Planets</a></li>
-        <li style="display: inline; margin-right: 20px;"><a href="/about" style="text-decoration: none; color: white; font-weight: bold; font-size: 18px;">About</a></li>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/stars">Stars</a></li>
+        <li><a href="/planets">Planets</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/login">Login</a></li>
       </ul>
+      <input type="text" placeholder="Search...">
     </nav>
   </header>
 
-  <main style="padding: 20px;">
+  <main>
     <p>Welcome to the Galactic Explorer! Choose a destination to explore the wonders of the universe.</p>
-    <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; margin-right: 10px;">Login</button>
-    <input type="text" placeholder="Search..." style="padding: 10px; font-size: 16px;">
+    <button onclick="redirectToLogin()">Login</button>
+    <!-- Removed the search input from here -->
   </main>
 
-  <footer style="background-color: #333; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+  <footer>
     <p>&copy; 2023 Galactic Explorer</p>
   </footer>
+
+  <script>
+    function redirectToLogin() {
+      window.location.href = "/login";
+    }
+  </script>
 </body>
 
 </html>

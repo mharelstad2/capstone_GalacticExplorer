@@ -17,6 +17,10 @@ app.get('/planets', (req, res) => {
   res.render('planets');
 });
 
+app.get('/login', (req, res) => {
+    res.render('login');
+  });
+
 app.get('/about', (req, res) => {
     res.render('about');
   });
