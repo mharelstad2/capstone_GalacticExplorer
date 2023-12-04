@@ -6,15 +6,15 @@ app.set ('view engine', 'ejs');
 app.use (express.static ('public'));
 
 app.get ('/', (req, res) => {
-  res.render ('index');
+  res.render ('../capstone_GalacticExplorer/index.php');
 });
 
 app.get ('/stars', (req, res) => {
-  res.render ('stars');
+  res.render ('../capstone_GalacticExplorer/stars.php');
 });
 
 app.get ('/planets', (req, res) => {
-  res.render ('planets');
+  res.render ('../capstone_GalacticExplorer/planets.php');
 });
 
 app.get ('/login', (req, res) => {
@@ -22,7 +22,7 @@ app.get ('/login', (req, res) => {
 });
 
 app.get ('/about', (req, res) => {
-  res.render ('about');
+  res.render ('../capstone_GalacticExplorer/about.php');
 });
 
 app.listen (port, () => {
