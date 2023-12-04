@@ -4,92 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/css/styles.css">
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1em 0;
-    }
-
-    nav {
-      background-color: #4CAF50;
-      color: white;
-      padding: 1em;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    nav a:hover {
-      color: #FFD700;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1em 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-
-    input {
-      padding: 10px;
-      font-size: 16px;
-    }
-    
-    nav {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    nav ul {
-      display: flex;
-      align-items: center;
-    }
-
-    input {
-      margin-left: auto;
-    }
-
     .solar-system {
       display: flex;
       justify-content: center;
@@ -107,7 +23,8 @@
       height: 100px;
       margin-bottom: 10px;
       border-radius: 50%;
-      cursor: pointer; /* Add cursor pointer for better UX */
+      cursor: pointer;
+      /* Add cursor pointer for better UX */
     }
 
     .planet a {
@@ -125,7 +42,8 @@
       color: #333;
       font-weight: bold;
       margin-top: 5px;
-      text-decoration: none !important; /* Add !important to override other styles */
+      text-decoration: none !important;
+      /* Add !important to override other styles */
     }
   </style>
   <title>Galactic Explorer - Planets</title>
@@ -136,10 +54,10 @@
     <h1>Galactic Explorer</h1>
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/stars">Stars</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/login">Login</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="stars.php">Stars</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="../login.php">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -147,49 +65,49 @@
     <div class="solar-system">
       <div class="planet-container">
         <a href="/slideshow/mercury" onclick="goToSlideshow('/slideshow/mercury')">
-          <img class="planet" src="/img/mercury.jpg" alt="Mercury">
+          <img class="planet" src="../public/img/mercury.jpg" alt="Mercury">
           <div class="planet-name">Mercury</div>
         </a>
       </div>
       <div class="planet-container">
         <a href="/slideshow/venus" onclick="goToSlideshow('/slideshow/venus')">
-          <img class="planet" src="/img/venus.jpg" alt="Venus">
+          <img class="planet" src="../public/img/venus.jpg" alt="Venus">
           <div class="planet-name">Venus</div>
         </a>
       </div>
       <div class="planet-container">
         <a href="/slideshow/earth" onclick="goToSlideshow('/slideshow/earth')">
-          <img class="planet" src="/img/earth.jpg" alt="Earth">
+          <img class="planet" src="../public/img/earth.jpg" alt="Earth">
           <div class="planet-name">Earth</div>
         </a>
       </div>
       <div class="planet-container">
         <a href="/slideshow/mars" onclick="goToSlideshow('/slideshow/mars')">
-          <img class="planet" src="/img/mars.jpg" alt="Mars">
+          <img class="planet" src="../public/img/mars.jpg" alt="Mars">
           <div class="planet-name">Mars</div>
         </a>
       </div>
       <div class="planet-container">
         <a href="/slideshow/jupiter" onclick="goToSlideshow('/slideshow/jupiter')">
-          <img class="planet" src="/img/jupiter.jpg" alt="Jupiter">
+          <img class="planet" src="../public/img/jupiter.jpg" alt="Jupiter">
           <div class="planet-name">Jupiter</div>
         </a>
       </div>
       <div class="planet-container">
         <a href="/slideshow/saturn" onclick="goToSlideshow('/slideshow/saturn')">
-          <img class="planet" src="/img/saturn.jpg" alt="Saturn">
+          <img class="planet" src="../public/img/saturn.jpg" alt="Saturn">
           <div class="planet-name">Saturn</div>
         </a>
       </div>
       <div class="planet-container">
         <a href="/slideshow/uranus" onclick="goToSlideshow('/slideshow/uranus')">
-          <img class="planet" src="/img/uranus.jpg" alt="Uranus">
+          <img class="planet" src="../public/img/uranus.jpg" alt="Uranus">
           <div class="planet-name">Uranus</div>
         </a>
       </div>
       <div class="planet-container">
         <a href="/slideshow/neptune" onclick="goToSlideshow('/slideshow/neptune')">
-          <img class="planet" src="/img/neptune.jpg" alt="Neptune">
+          <img class="planet" src="../public/img/neptune.jpg" alt="Neptune">
           <div class="planet-name">Neptune</div>
         </a>
       </div>
