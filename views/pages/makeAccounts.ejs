@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+   <style>
+        body {
+            text-align: center;
+            width: 99%;
+        }
+
+        form {
+            position: relative;
+            text-align: center;
+        }
+
+        form > label,
+        form > input {
+          margin: 5px;
+          width: 100%;
+        }
+
+        form::before {
+          content: "";
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+        }
+
+        form > div {
+          display: inline-block;
+          vertical-align: middle;
+          text-align: left;
+          max-width: 400px;
+          width: 100%;
+        }
+</style>
+  <title>Galactic Explorer - Make Account</title>
+</head>
+
+<body>
+  <header>
+    <h1>Galactic Explorer</h1>
+    <nav>
+      <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/stars">Stars</a></li>
+        <li><a href="/planets">Planets</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <input type="text" placeholder="Search...">
+    </nav>
+  </header>
+
+<form style="margin: 0 auto; width: 50%;" action="/makeAccounts" method="post">
+    <label for="email">Email:</label>
+    <input type="email" placeholder="Email" name="email" id="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="password" id="confirm_password" name="confirm_password" required>
+
+    <button type="submit">Create Account</button>
+  </form>
+
+  <footer>
+    <p>&copy; 2023 Galactic Explorer</p>
+  </footer>
+
+</body>
+
+</html>

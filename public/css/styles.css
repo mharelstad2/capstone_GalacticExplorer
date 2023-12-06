@@ -3,19 +3,23 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 header {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 1em 0;
+  padding-top: .5rem;
 }
 
 nav {
   background-color: #4CAF50;
   color: white;
-  padding: 1em;
   text-align: center;
 }
 
@@ -23,62 +27,90 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 nav a:hover {
   color: #FFD700;
 }
 
-main {
-  padding: 20px;
+.solar-system {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.planet-container {
+  margin: 0 10px;
+  text-align: center;
+  flex: 1;
+}
+
+.planet {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.planet a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.planet a:hover {
+  color: #FFD700;
+}
+
+.planet-name {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 1em 0;
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: .0125rem;
 }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  margin-right: 10px;
+footer p {
+  margin: .125rem;
 }
 
-input {
-  padding: 10px;
-  font-size: 16px;
-}
+@media (max-width: 768px) {
+  .planet-container {
+    flex: 1 0 100%;
+  }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-}
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
 
-nav ul {
-  display: flex;
-  align-items: center;
-}
-
-input {
-  margin-left: auto;
+  main {
+    padding-bottom: 60px;
+    /* Adjust padding to accommodate the footer */
+  }
 }

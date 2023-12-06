@@ -66,7 +66,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Get form data
-        $email = $_POST['email'];
+        $email = strtolower($_POST['email']);
         $password = $_POST['password'];
         $confirmPassword = $_POST['confirm_password'];
 
@@ -100,7 +100,9 @@
 
                 $pdo->commit();
 
-                $successMessage = 'Account created successfully!';
+                $successMessage = 'Account created successfully! <br>
+                <a href="login.php">Click here to login and go to the special user page!</a>
+                ';
             } catch (PDOException $ex) {
                 $pdo->rollBack();
 

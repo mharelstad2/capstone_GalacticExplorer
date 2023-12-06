@@ -1,12 +1,22 @@
 {
-  "name": "my_project",
+  "name": "pe-tracker",
   "version": "1.0.0",
-  "description": "Your Project Description",
-  "main": "server.js",
+  "description": "Student Instructor Observation Tool\r Jdavis86@student.cvtc.edu",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "ejs-lint": "^2.0.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "path": "^0.12.7",
+    "pg": "^8.11.3",
+    "php": "^1.0.2"
   }
 }
