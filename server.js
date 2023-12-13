@@ -35,7 +35,18 @@ express ()
   })
   
   .get('/uaQuiz', async (req, res) => {
-    res.render ('pages/uaQuiz');
+    try {
+      console.log(path.join(__dirname, 'views/pages/uaQuiz.ejs')); // Log the path
+      res.render('pages/uaQuiz');
+    } catch (err) {
+      console.error(err);
+      res.set({
+        'Content-Type': 'application/json',
+      });
+      res.json({
+        error: err,
+      });
+    }
   })
   
   .get('/stars', async (req, res) => {
