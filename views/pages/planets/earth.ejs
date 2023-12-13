@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    button {
+      background-color: #4caf50;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    /* Styling specific to the Mercury Slideshow Gallery page */
+    h1 {
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .image-container {
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .image-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Additional styling for the Earth page */
+    .earth-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .earth-image {
+      width: 400px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .earth-facts {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .close {
+      opacity: 0;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Styling for the credits section */
+  </style>
+  <title>Earth</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1>Galactic Explorer</h1>
+      <nav>
+        <button onclick="goBack()">Back</button>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Earth</h1>
+      <div class="gallery" onclick="openModal()">
+        <div class="image-container">
+          <img src="/img/planetImg/earth1.jpg" alt="Earth 1" />
+        </div>
+        <div class="image-container">
+          <img src="/img/planetImg/earth2.jpg" alt="Earth 2" />
+        </div>
+        <div class="image-container">
+          <img src="/img/planetImg/earth3.jpg" alt="Earth 3" />
+        </div>
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <img style="height: 100vh; width: 100vh;" class="modal-content" id="modalImage" />
+        <span style="cursor: pointer" id="close" onclick="closeModal()">&times;</span>
+      </div>
+      <div class="earth-facts">
+        <h3>Facts About Earth</h3>
+        <p>
+          Earth, a celestial marvel, exhibits fascinating traits. Its
+          non-spherical shape, bulging at the equator due to rotation, results
+          in varying diameters at poles and equator. The planet's day has
+          elongated to 24 hours influenced by the moon's tidal forces.
+          Tectonic shifts over millions of years led to the assembly and
+          breakup of supercontinents like Rodinia and Pangaea. Earth endured
+          ancient ice ages, possibly experiencing "snowball Earth" phases with
+          extreme freezing. The Atacama Desert in Chile, adjacent to the
+          Pacific, stands as Earth's driest region. Gravity anomalies, mapped
+          by missions like GRACE, highlight non-uniformity on Earth.
+          Historical sea level fluctuations, caused by ice age glaciers,
+          reveal the planet's dynamic geological past. In five billion years,
+          the sun, Earth's life source, will evolve into a red giant, posing a
+          potential threat. Earth has orbital companions beyond the moon,
+          including asteroids like 3753 Cruithne and 2002 AA29. Lastly, the
+          real phenomenon of calm before a storm arises from complex air
+          movements. These concise facts unveil Earth's ever-changing nature
+          and its intricate cosmic relationship.
+        </p>
+        <!-- Add more facts as needed -->
+      </div>
+    </main>
+
+    <div style="padding-bottom: 1rem">
+      <h4>Credits:</h4>
+      <p>
+        These facts are sourced from [NASA]. Visit their website for more
+        information:
+        <a href="https://www.nasa.gov/" target="_blank">[https://www.nasa.gov/]</a>
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Galactic Explorer</p>
+  </footer>
+  <script>document.getElementById('myModal').style.display = 'none';</script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galactic Explorer - Home</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      main {
+        text-align: center;
+      }
+
+      section {
+        float: left;
+        width: 45%;
+        margin: 10px;
+      }
+
+      footer {
+        clear: both;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 600px) {
+        /* Styles for small screens, like phones */
+        section {
+          float: none;
+        }
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Galactic Explorer</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/stars">Stars</a></li>
+          <li><a href="/planets">Planets</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main style="text-align: center">
+      <p>
+        Welcome to the Galactic Explorer! Choose a destination to explore the
+        wonders of the universe. Login and explore the universe.
+      </p>
+      <button onclick="redirectToLogin()">Login</button>
+      <div style="float: left">
+        <h2 style="text-align: center">New Space News!</h2>
+        <p>
+          In a dynamic series of space-related developments, SpaceX is launching
+          23 Starlink internet satellites shortly after deploying the U.S. Space
+          Force's X-37B space plane. Simultaneously, experts anticipate 2023 to
+          be the hottest recorded year following an exceptionally warm autumn.
+          NASA takes a forefront position in climate change efforts with the
+          establishment of a "Greenhouse Gas Center" to monitor humanity's
+          impact. The James Webb Space Telescope gains recognition for its
+          captivating image in the White House Advent Calendar, while a rare
+          asteroid occultation of Betelgeuse is set for December 11. In
+          entertainment, Paramount+ teases the second season of "Halo" with an
+          action-packed trailer. Festive cheer reaches space as NASA astronaut
+          Jasmin Moghbeli spins a dreidel for Hanukkah on the International
+          Space Station. A groundbreaking discovery reveals cosmic nuclear
+          fission, indicating neutron star collisions may trigger nuclear
+          reactions alongside creating heavy elements. Looking to the future,
+          SpaceX's Polaris Dawn mission, featuring the inaugural commercial
+          spacewalk, is delayed to April 2024. Additionally, the ULA Vulcan
+          Centaur rocket's first launch is rescheduled for January 2024 due to a
+          dress rehearsal glitch. These events underscore the multifaceted
+          landscape of contemporary space exploration, spanning scientific
+          breakthroughs, climate awareness, entertainment ventures, and ongoing
+          space mission advancements.
+        </p>
+      </div>
+      <section style="float: right">
+        <h2>Planets Page</h2>
+        <p>
+          The Planets Page on Galactic Explorer provides a captivating journey
+          through our celestial neighbors. Each planet is showcased with its own
+          dedicated section, featuring information about its unique
+          characteristics, composition, and any noteworthy facts. Visitors can
+          explore a diverse range of planets, from the rocky surfaces of Mercury
+          and Mars to the gas giants like Jupiter and Saturn. The page offers an
+          immersive experience, allowing users to delve into the details of each
+          planet in our solar system.
+        </p>
+      </section>
+
+      <section style="float: left">
+        <h2>Stars Page</h2>
+        <p>
+          The Stars Page offers a dazzling exploration of the luminous entities
+          that light up our night sky. Featuring a visually striking layout, the
+          page introduces various types of stars, each represented by stunning
+          images. From the common and stable yellow dwarf stars to the massive
+          and radiant blue supergiants, users can learn about the distinct
+          features of these celestial bodies. The page provides insightful
+          descriptions, making it an engaging resource for anyone interested in
+          understanding the diverse nature of stars. Accompanied by informative
+          paragraphs, visitors can grasp the unique characteristics of each star
+          type.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Galactic Explorer</p>
+    </footer>
+
+    <script>
+      function redirectToLogin() {
+        window.location.href = "/login";
+      }
+    </script>
+  </body>
+</html>

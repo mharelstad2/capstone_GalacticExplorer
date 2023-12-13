@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("/img/space-background.jpg");
+        background-size: cover;
+        color: #fff;
+      }
+
+      main {
+        height: 100%;
+      }
+
+      .stars-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .star {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 10px;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .star:hover {
+        transform: scale(1.1);
+      }
+
+      .yellow-dwarf {
+        background-image: url("/img/yellow-dwarf.jpg");
+      }
+
+      .red-giant {
+        background-image: url("/img/red-giant.jpg");
+      }
+
+      .blue-supergiant {
+        background-image: url("/img/blue-supergiant.jpg");
+      }
+
+      .white-dwarf {
+        background-image: url("/img/white-dwarf.jpg");
+      }
+
+      .neutron-star {
+        background-image: url("/img/neutron-star.jpg");
+      }
+
+      .black-hole {
+        background-image: url("/img/black-hole.jpg");
+      }
+
+      .names {
+        margin-top: 3.25rem;
+        color: white;
+        text-shadow: black .125rem .125rem;
+        backdrop-filter: blur(10px);
+        font-size: 1.5625rem;
+      }
+
+
+      #descriptions {
+        margin-top: 20px;
+        color: white;
+        text-shadow: black .125rem .125rem;
+        backdrop-filter: blur(10px);
+        font-size: 1.5625rem;
+      }
+    </style>
+    <title>Galactic Explorer - Stars</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Galactic Explorer</h1>
+      <nav>
+        <ul>
+          <li><a href="/index">Home</a></li>
+          <li><a href="/stars">Stars</a></li>
+          <li><a href="/planets">Planets</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main style="margin-bottom: 1rem;">
+      <h2>Stars Page</h2>
+      <div class="stars-container">
+        <div class="star yellow-dwarf">
+          <p class="names">Yellow Dwarf</p>
+        </div>
+        <div class="star red-giant">
+          <p class="names">Red Giant</p>
+        </div>
+        <div class="star blue-supergiant">
+          <p class="names">Blue Super Giant</p>
+        </div>
+        <div class="star white-dwarf">
+          <p class="names">White Dwarf</p>
+        </div>
+        <div class="star neutron-star">
+          <p class="names">Neutron Star</p>
+        </div>
+        <div class="star black-hole">
+            <p class="names">Black Hole</p>
+        </div>
+      </div>
+      <p id="descriptions">
+        Stars come in various types, each with its unique characteristics.
+        Yellow dwarf stars, like our Sun, are common and stable. Red giant stars
+        expand as they age, while blue supergiants are massive and luminous.
+        White dwarf stars are the remnants of smaller stars, and neutron stars
+        are incredibly dense. Black holes have gravitational forces so strong
+        that nothing, not even light, can escape them.
+      </p>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Galactic Explorer</p>
+    </footer>
+  </body>
+</html>

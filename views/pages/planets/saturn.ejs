@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    button {
+      background-color: #4CAF50;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    /* Styling specific to the Mercury Slideshow Gallery page */
+    h1 {
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .image-container {
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .image-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Additional styling for the Mercury page */
+    .saturn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .saturn-image {
+      width: 400px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .saturn-facts {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .close {
+      opacity: 0;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+  <title>Saturn</title>
+</head>
+
+<body>
+  <div id="wrapper">
+  <header>
+    <h1>Galactic Explorer</h1>
+    <nav>
+      <button onclick="goBack()">Back</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Saturn</h1>
+    <div class="gallery" onclick="openModal()">
+      <div class="image-container">
+        <img src="/img/planetImg/sat1.jpg" alt="Saturn 1">
+      </div>
+      <div class="image-container">
+        <img src="/img/planetImg/sat2.jpg" alt="Saturn 2">
+      </div>
+      <div class="image-container">
+        <img src="/img/planetImg/sat3.jpg" alt="Saturn 3">
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <img style="height: 100vh; width: 100vh;" class="modal-content" id="modalImage" />
+        <span style="cursor: pointer" id="close" onclick="closeModal()">&times;</span>
+      </div>
+
+    <div class="saturn-facts">
+      <h3>Facts About Saturn</h3>
+      <p>
+        Saturn, the sixth planet from the Sun, is a celestial marvel renowned for its stunning ring system. These iconic rings are not solid but made up of countless particles, ranging from tiny grains to sizable chunks. The planet itself is a gas giant, primarily composed of hydrogen and helium, with a small rocky core. One fascinating aspect of Saturn is its incredible ring system, consisting of seven main rings labeled A through G. These rings are believed to be remnants of comets, asteroids, or shattered moons that got too close to Saturn and were torn apart by its gravity. Saturn has a prominent place in mythology and has captivated astronomers and space enthusiasts for centuries. Its mesmerizing appearance, marked by those spectacular rings, makes Saturn a truly extraordinary member of our solar system.</p>
+      <!-- Add more facts as needed -->
+    </div>
+
+    <div style="padding-bottom: 1rem;">
+      <h4>Credits:</h4>
+      <p>These facts are sourced from [NASA]. Visit their website for more information: <a href="https://www.nasa.gov/" target="_blank">[https://www.nasa.gov/]</a></p>
+    </div>
+  </main>
+</div>
+
+  <footer>
+    <p>&copy; 2023 Galactic Explorer</p>
+  </footer>
+
+   <script>document.getElementById('myModal').style.display = 'none';</script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

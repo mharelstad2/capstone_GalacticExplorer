@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    button {
+      background-color: #4CAF50;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input {
+      margin-left: auto;
+    }
+
+    /* Styling specific to the Mercury Slideshow Gallery page */
+    h1 {
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .image-container {
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .image-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Additional styling for the Mercury page */
+    .mercury-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .mercury-image {
+      width: 400px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mercury-facts {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .close {
+      opacity: 0;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }   
+
+  </style>
+  <title>Mercury</title>
+</head>
+
+<body onload="closeModal()">
+  <div id="wrapper">
+  <header>
+    <h1>Galactic Explorer</h1>
+    <nav>
+      <button onclick="goBack()">Back</button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="wrapper">
+    <h1>Mercury</h1>
+    <div class="gallery" onclick="openModal()">
+      <div class="image-container">
+        <img src="/img/planetImg/merc1.jpg" alt="Mercury 1">
+      </div>
+      <div class="image-container">
+        <img src="/img/planetImg/merc2.jpg" alt="Mercury 2">
+      </div>
+      <div class="image-container">
+        <img src="/img/planetImg/merc3.jpg" alt="Mercury 3">
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <img style="height: 100vh; width: 100vh;" class="modal-content" id="modalImage" />
+        <span style="cursor: pointer" id="close" onclick="closeModal()">&times;</span>
+      </div>
+    
+    <div class="mercury-facts">
+      <h3>Facts About Mercury</h3>
+      <p>Mercury, the smallest planet in our solar system and the closest to the Sun, presents a fascinating array of extremes. Experiencing scorching temperatures of up to 800 degrees Fahrenheit (430 degrees Celsius) during the day and plummeting to icy lows of -290 degrees Fahrenheit (-180 degrees Celsius) at night, Mercury's surface is a rugged landscape marked by craters, cliffs, and expansive plains like the Caloris Basin. Despite its compact size, Mercury boasts a relatively high density owing to its composition of metal and rock. With a thin atmosphere primarily comprising oxygen, sodium, and hydrogen, the planet lacks the ability to retain a substantial gas envelope. Its slow rotation results in an unusually lengthy day, lasting about 176 Earth days, while completing an orbit around the Sun in approximately 88 Earth days. Exploration of Mercury poses unique challenges due to its lack of natural moons and its proximity to the Sun. NASA's Messenger mission has played a pivotal role in unraveling the mysteries of Mercury, shedding light on its composition, magnetic field, and geological features.</p>
+      <!-- Add more facts as needed -->
+    </div>
+
+    <div style="padding-bottom: 1rem;">
+      <h4>Credits:</h4>
+      <p>These facts are sourced from [NASA]. Visit their website for more information: <a href="https://www.nasa.gov/" target="_blank">[https://www.nasa.gov/]</a></p>
+    </div>
+
+  </main>
+</div>
+
+  <footer>
+    <p>&copy; 2023 Galactic Explorer</p>
+  </footer>
+
+    <script>document.getElementById('myModal').style.display = 'none';</script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

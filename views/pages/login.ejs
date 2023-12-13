@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Galactic Explorer - Login Page</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      body {
+        text-align: center;
+        width: 99%;
+        background-color: #1a1a1a;
+        color: #fff;
+      }
+
+      form {
+        position: relative;
+        text-align: center;
+      }
+
+      form > label,
+      form > input {
+        margin: 5px;
+        width: 100%;
+      }
+
+      form::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+
+      form > div {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        max-width: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Galactic Explorer</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/stars">Stars</a></li>
+          <li><a href="/planets">Planets</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h2>Please login to gain user access</h2>
+
+    <form style="margin: 0 auto; width: 50%" action="/login" method="post">
+      <!-- Updated action attribute -->
+      <label for="email">Email:</label>
+      <input type="email" placeholder="Email" name="email" id="email" />
+      <br /><br />
+
+      <label for="passWord">Password:</label>
+      <input
+        type="password"
+        placeholder="Password"
+        name="passWord"
+        id="passWord"
+      />
+      <br /><br />
+
+      <input type="submit" name="clickIt" value="Log In" />
+    </form>
+
+    <h3 style="margin-bottom: 2rem">
+      If you don't have an account <br />
+      <a style="color: inherit" href="/makeAccounts">create one here</a>.
+    </h3>
+
+    <footer>
+      <p>&copy; 2023 Galactic Explorer</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    button {
+      background-color: #4CAF50;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input {
+      margin-left: auto;
+    }
+
+    /* Styling specific to the Mercury Slideshow Gallery page */
+    h1 {
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .image-container {
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .image-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Additional styling for the Mercury page */
+    .mars-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .mars-image {
+      width: 400px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mars-facts {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .close {
+      opacity: 0;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+  </style>
+  <title>Mars</title>
+</head>
+
+<body>
+  <div id="wrapper">
+  <header>
+    <h1>Galactic Explorer</h1>
+    <nav>
+      <button onclick="goBack()">Back</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Mars</h1>
+    <div class="gallery" onclick="openModal()">
+      <div class="image-container">
+        <img src="/img/planetImg/mars1.jpg" alt="Mars 1">
+      </div>
+      <div class="image-container">
+        <img src="/img/planetImg/mars2.jpg" alt="Mars 2">
+      </div>
+      <div class="image-container">
+        <img src="/img/planetImg/mars3.jpg" alt="Mars 3">
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <img style="height: 100vh; width: 100vh;" class="modal-content" id="modalImage" />
+        <span style="cursor: pointer" id="close" onclick="closeModal()">&times;</span>
+      </div>
+
+    <div class="mars-facts">
+      <h3>Facts About Mars</h3>
+      <p>
+        Mars, often referred to as the "Red Planet," has captivated scientists and enthusiasts with its distinct reddish appearance. This enigmatic world showcases a diverse landscape, featuring expansive deserts, towering volcanoes, and the impressive Valles Marineris canyon system—one of the largest canyons in our solar system. Mars hosts two small, irregular moons, Phobos and Deimos, adding to its mysterious allure. Numerous missions, including rovers and orbiters, have been launched to unravel Mars' geological history and search for signs of past or present life. As we aspire to explore and possibly colonize other planets, Mars remains a primary target for future interplanetary endeavors.</p>
+      <!-- Add more facts as needed -->
+    </div>
+
+    <div style="padding-bottom: 1rem;">
+      <h4>Credits:</h4>
+      <p>These facts are sourced from [NASA]. Visit their website for more information: <a href="https://www.nasa.gov/" target="_blank">[https://www.nasa.gov/]</a></p>
+    </div>
+
+  </main>
+</div>
+
+  <footer>
+    <p>&copy; 2023 Galactic Explorer</p>
+  </footer>
+    <script>document.getElementById('myModal').style.display = 'none';</script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

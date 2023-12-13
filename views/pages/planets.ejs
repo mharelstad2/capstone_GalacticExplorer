@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("/img/space-background.jpg");
+  background-size: cover;
+  color: #fff;
+}
+
+.solar-system {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.planet-container {
+  margin: 0 1.25rem; 
+  text-align: center;
+}
+
+.planet {
+  width: 6.25rem; 
+  height: 6.25rem; 
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.planet a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.planet a:hover {
+  color: #ffd700;
+}
+
+.planet-name {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+@media (max-width: 48rem) {
+  .planet-container {
+    flex: 1 0 100%;
+  }
+
+  .planet-name {
+    float: right;
+  }
+}
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+    </style>
+    <title>Galactic Explorer - Planets</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Galactic Explorer</h1>
+      <nav>
+        <ul>
+          <li><a href="/index">Home</a></li>
+          <li><a href="/stars">Stars</a></li>
+          <li><a href="/planets">Planets</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main style="height: 100%;">
+      <div class="solar-system" style="height: 100%;">
+        <div class="planet-container">
+          <a
+            href="/planets/mercury"
+            onclick="goToSlideshow('/planets/mercury')"
+          >
+            <img class="planet" src="/img/mercury.jpg" alt="Mercury" />
+            <div class="planet-name">Mercury</div>
+          </a>
+        </div>
+        <div class="planet-container">
+          <a href="/planets/venus" onclick="goToSlideshow('/planets/venus')">
+            <img class="planet" src="/img/venus.jpg" alt="Venus" />
+            <div class="planet-name">Venus</div>
+          </a>
+        </div>
+        <div class="planet-container">
+          <a href="/planets/earth" onclick="goToSlideshow('/planets/earth')">
+            <img class="planet" src="/img/earth.jpg" alt="Earth" />
+            <div class="planet-name">Earth</div>
+          </a>
+        </div>
+        <div class="planet-container">
+          <a href="/planets/mars" onclick="goToSlideshow('/planets/mars')">
+            <img class="planet" src="/img/mars.jpg" alt="Mars" />
+            <div class="planet-name">Mars</div>
+          </a>
+        </div>
+        <div class="planet-container">
+          <a
+            href="/planets/jupiter"
+            onclick="goToSlideshow('/planets/jupiter')"
+          >
+            <img class="planet" src="/img/jupiter.jpg" alt="Jupiter" />
+            <div class="planet-name">Jupiter</div>
+          </a>
+        </div>
+        <div class="planet-container">
+          <a href="/planets/saturn" onclick="goToSlideshow('/planets/saturn')">
+            <img class="planet" src="/img/saturn.jpg" alt="Saturn" />
+            <div class="planet-name">Saturn</div>
+          </a>
+        </div>
+        <div class="planet-container">
+          <a href="/planets/uranus" onclick="goToSlideshow('/planets/uranus')">
+            <img class="planet" src="/img/uranus.jpg" alt="Uranus" />
+            <div class="planet-name">Uranus</div>
+          </a>
+        </div>
+        <div class="planet-container">
+          <a href="/planets/neptune" onclick="goToSlideshow('/planets/neptune')">
+            <img class="planet" src="/img/neptune.jpg" alt="Neptune" />
+            <div class="planet-name">Neptune</div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Galactic Explorer</p>
+    </footer>
+
+    <script>
+      function goToSlideshow(url) {
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>

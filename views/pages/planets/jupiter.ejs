@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    button {
+      background-color: #4CAF50;
+      color: black;
+      padding: .625rem 1.25rem;
+      border: none;
+      cursor: pointer;
+      margin-right: .625rem;
+    }
+
+    input {
+      padding: .625rem;
+      font-size: 1rem;
+    }
+
+
+    /* Styling specific to the Mercury Slideshow Gallery page */
+    h1 {
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .image-container {
+      margin: .625rem;
+      cursor: pointer;
+    }
+
+    .image-container img {
+      width: 12.5rem;
+      height: 12.5rem;
+      object-fit: cover;
+      border-radius: .5rem;
+      transition: transform 0.3s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Additional styling for the Mercury page */
+    .jupiter-container {
+      text-align: center;
+      margin-top: 1.25rem;
+    }
+
+    .jupiter-image {
+      width: 25rem;
+      height: auto;
+      border-radius: .5rem;
+      box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+    }
+
+    .jupiter-facts {
+      margin-top: 1.25rem;
+      text-align: center;
+    }
+    
+    .close {
+      opacity: 0;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+  </style>
+  <title>Jupiter</title>
+</head>
+
+<body>
+  <div id="wrapper">
+  <header>
+    <h1>Galactic Explorer</h1>
+    <nav>
+      <button onclick="goBack()">Back</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Jupiter</h1>
+    <div class="gallery" onclick="openModal()">
+      <div class="image-container">
+        <img src="/img/planetImg/jup1.jpg" alt="Jupiter 1">
+      </div>
+      <div class="image-container">
+        <img src="/img/planetImg/jup2.jpg" alt="Jupiter 2">
+      </div>
+      <div class="image-container">
+        <img src="/img/planetImg/jup3.jpg" alt="Jupiter 3">
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <img style="height: 100vh; width: 100vh;" class="modal-content" id="modalImage" />
+        <span style="cursor: pointer" id="close" onclick="closeModal()">&times;</span>
+      </div>
+
+    <div class="jupiter-facts">
+      <h3>Facts About Jupiter</h3>
+      <p>
+        Jupiter, the largest planet in our solar system, commands attention with its immense size and captivating features. Named after the king of the Roman gods, Jupiter is a gas giant composed mostly of hydrogen and helium. Its iconic feature, the Great Red Spot, is a colossal storm that has raged for centuries. Jupiter boasts a powerful magnetic field, making it a source of intense radiation. With a retinue of at least 79 known moons, including the four Galilean moons—Io, Europa, Ganymede, and Callisto—Jupiter's gravitational influence has sculpted a mini-solar system within our larger cosmic neighborhood. Studying Jupiter offers insights into planetary formation and dynamics, unraveling the mysteries of our celestial surroundings.</p>
+      <!-- Add more facts as needed -->
+    </div>
+
+    <div style="padding-bottom: 1rem;">
+      <h4>Credits:</h4>
+      <p>These facts are sourced from [NASA]. Visit their website for more information: <a href="https://www.nasa.gov/" target="_blank">[https://www.nasa.gov/]</a></p>
+    </div>
+
+  </main>
+</div>
+
+  <footer>
+    <p>&copy; 2023 Galactic Explorer</p>
+  </footer>
+    <script>document.getElementById('myModal').style.display = 'none';</script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
