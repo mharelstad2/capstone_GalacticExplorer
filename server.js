@@ -34,6 +34,10 @@ express ()
     res.render ('pages/index');
   })
   
+  .get('/uaquiz', async (req, res) => {
+    res.render ('pages/uaQuiz');
+  })
+  
   .get('/stars', async (req, res) => {
     res.render ('pages/stars');
   })

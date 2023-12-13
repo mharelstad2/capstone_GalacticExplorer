@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Space Quiz</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .quiz-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #question {
+      margin-bottom: 20px;
+    }
+
+    #options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+      border-radius: 4px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    #back-link {
+      color: #4CAF50;
+      text-decoration: none;
+      display: block;
+      margin-top: 20px;
+    }
+
+    #back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Space Quiz</h1>
+    <div id="question"></div>
+    <div id="options"></div>
+    <button style="display: none;" id="submit">Submit</button>
+    <div id="result"></div>
+    <a id="back-link" href="/userAccess">Go Back</a>
+  </div>
+
+  <script>
+    const quizContainer = document.querySelector('.quiz-container');
+    const questionElement = document.getElementById('question');
+    const optionsElement = document.getElementById('options');
+    const submitButton = document.getElementById('submit');
+    const resultElement = document.getElementById('result');
+    const backLink = document.getElementById('back-link');
+
+    const questions = [
+      {
+        question: 'Which planet is known as the "Red Planet"?',
+        options: ['Mars', 'Venus', 'Jupiter', 'Saturn'],
+        answer: 'Mars'
+      },
+      {
+        question: 'Which is the largest moon in our solar system?',
+        options: ['Titan', 'Europa', 'Ganymede', 'Callisto'],
+        answer: 'Ganymede'
+      },
+      {
+        question: 'What is the closest star to Earth?',
+        options: ['Proxima Centauri', 'Sirius', 'Alpha Centauri', 'Betelgeuse'],
+        answer: 'Proxima Centauri'
+      },
+      {
+        question: 'How many planets are there in our solar system?',
+        options: ['7', '8', '9', '10'],
+        answer: '8'
+      },
+      {
+        question: 'Which galaxy is the Milky Way closest to?',
+        options: ['Andromeda', 'Triangulum', 'Messier 87', 'Leo I'],
+        answer: 'Andromeda'
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function displayQuestion() {
+      const currentQuestion = questions[currentQuestionIndex];
+      
+      questionElement.textContent = currentQuestion.question;
+      
+      optionsElement.innerHTML = '';
+      
+      currentQuestion.options.forEach((option) => {
+        const button = document.createElement('button');
+        button.textContent = option;
+        button.addEventListener('click', checkAnswer);
+        optionsElement.appendChild(button);
+      });
+    }
+
+    function checkAnswer(event) {
+      const selectedOption = event.target.textContent;
+      
+      if (selectedOption === questions[currentQuestionIndex].answer) {
+        score++;
+      }
+      
+      currentQuestionIndex++;
+      
+      if (currentQuestionIndex === questions.length) {
+        displayResult();
+      } else {
+        displayQuestion();
+      }
+    }
+
+    function displayResult() {
+      quizContainer.innerHTML = `<h1>Your Score: ${score}/${questions.length}</h1>
+      <div id="result">Congratulations!</div>
+      <a id="back-link" href="/userAccess">Go Back</a>
+      `;
+    }
+
+    displayQuestion();
+  </script>
+</body>
+</html>
