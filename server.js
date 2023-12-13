@@ -50,7 +50,7 @@ express ()
   try {
     const viewPath = path.join(__dirname, 'views', 'pages', 'uaQuiz.ejs');
     console.log('Attempting to render:', viewPath);
-    res.render('pages/uaQuiz');
+    res.render('pages/UaQuiz');
   } catch (err) {
     console.error(err);
     res.set({
